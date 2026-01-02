@@ -8,8 +8,8 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 def get_open_issues(repo):
     url = f"https://api.github.com/repos/{repo}/issues"
     headers = {
-        "Authorization": f"token {GITHUB_TOKEN}",
-        "Accept": "application/vnd.github.v3+json"
+    "Authorization": f"Bearer {GITHUB_TOKEN}",
+    "Accept": "application/vnd.github.v3+json"
     }
 
     response = requests.get(url, headers=headers, params={"state": "open"})
