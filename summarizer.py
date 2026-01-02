@@ -3,7 +3,8 @@ from transformers import pipeline
 summarizer_pipeline = pipeline("summarization", model="facebook/bart-large-cnn")
 
 def summarize_issue(title: str, body: str) -> str:
-    text = f"{title}\n\n{body}"
+    text = f"{title}\n\n{body}"[:4000]
+
 
     if not text or len(text.strip()) == 0:
         return "No content to summarize."
