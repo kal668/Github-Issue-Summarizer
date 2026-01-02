@@ -37,7 +37,7 @@ GitHub issues often contain long technical discussions. Summarizing them helps d
 
 While OpenAI’s GPT-3.5 API is powerful, it has usage limits and requires billing. To avoid quota errors and improve portability, we use a local summarization model from Hugging Face (facebook/bart-large-cnn) which is:
 
-Free to use
+->Free to use
 
 ->Runs offline after the initial download
 
